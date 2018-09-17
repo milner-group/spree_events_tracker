@@ -13,7 +13,7 @@ module Spree
         Spree::Page::Event::Tracker.new(
           session_id: session.id,
           referrer: request.referrer,
-          actor: current_spree_user,
+          actor: current_user,
           target: instance_variable_get("@#{ controller_name.singularize }"),
           activity: get_activity,
           search_keywords: get_keywords,
